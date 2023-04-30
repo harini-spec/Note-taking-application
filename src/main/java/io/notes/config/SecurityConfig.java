@@ -35,7 +35,7 @@ public class SecurityConfig {
 	      .requestMatchers("/user/**").hasRole("USER")
 	      .requestMatchers("/**").permitAll()
 	      .and().formLogin().loginPage("/login").loginProcessingUrl("/login")
-	      .defaultSuccessUrl("/user/home").and().csrf().disable();
+	      .defaultSuccessUrl("/user/addNotes").and().csrf().disable();
 
 	    return http.build();
     }

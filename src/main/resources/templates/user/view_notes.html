@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="user/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>View</title>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<h3 class="text-center">Notes</h3>
+			
+			<!--
+			 <div th:if="${session.msg}" class="text-center" role="alert">  
+				<h4 th:text="${session.msg}"></h4>
+				<th:block th:text="${#session.removeAttribute('msg')}"></th:block>
+			</div> 
+			-->
+
+			<div class="col-md-12 mt-3" th:each="n:${Notes}"> 
+				<div class="card paint-card">
+					<div class="card-body">
+						<div class="text-center">
+							<img alt="" th:src="@{/img/note-taking.png}"
+								style="width: 70px; height: 75px;">
+						</div>
+
+						<h5>[[${n.title}]]</h5>
+						<p>
+							[[${n.description}]] <br> <br> 
+							<span class="font-weight-bold">Upload Date :</span> [[${updatedDate}]]
+
+						</p>
+						<div class="text-center">
+							<a th:href="@{/user/editNotes}" class="btn btn-primary btn-sm">Edit</a>
+							
+							 <a
+								href="#" class="btn btn-danger btn-sm ml-2">Delete</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<!-- pagination from bootstrap and total notes count -->
+		
+		<div class="row pd-4">
+		<div class="col-md-4">Total Notes: [[${totalElements}]]</div>
+		<div class="col-md-6">
+			<nav aria-label="Page navigation example">
+			  <ul class="pagination">
+			    <li class="page-item">
+			      <a class="page-link" href="#" aria-label="Previous">
+			        <span aria-hidden="true">&laquo;</span>
+			        <span class="sr-only">Previous</span>
+			      </a>
+			    </li>
+			    <li class="page-item"><a class="page-link" href="#">1</a></li>
+			    <li class="page-item"><a class="page-link" href="#">2</a></li>
+			    <li class="page-item"><a class="page-link" href="#">3</a></li>
+			    <li class="page-item">
+			      <a class="page-link" href="#" aria-label="Next">
+			        <span aria-hidden="true">&raquo;</span>
+			        <span class="sr-only">Next</span>
+			      </a>
+			    </li>
+			  </ul>
+			</nav>
+		</div>
+		</div>
+
+		</div>
+
+	</section>
+</body>
+</html>
