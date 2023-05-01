@@ -12,9 +12,11 @@
 				<div class="card paint-card">
 					<h3 class="text-center">Add Notes</h3>
 					
+					<!--  
 					<div th:if="${session.msg}" class="text-center" role="alert">
 						<h4 class="text-success" th:text="${session.msg}"></h4>
 					</div>
+					-->
 					
 					<div class="card-body">
 						<form th:action="@{/user/saveNotes}" method="post">

@@ -13,12 +13,14 @@
 					<div class="card mt-2 paint-card">
 						<h1 class="text-center">Register Here</h1>
 
-						<!--alert message  -->
+						<!--  
+						
 						 <div th:if="${session.msg}" class="text-center">
 							<h4 class="text-success" th:text="${session.msg}"></h4>
 							
 						</div> 
-						<!--alert message  -->
+						
+						-->
 
 						<div class="card-body">
 							<form th:action="@{/saveUser}" method="post">
