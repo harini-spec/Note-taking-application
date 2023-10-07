@@ -25,7 +25,7 @@ Run the Springboot application and go to http://localhost:8080/
 <img src="screenshots/AfterAdd.png">
 <h1> Edit Notes Page </h1>
 <img src="screenshots/EditNotes.png">
-<h1> Edited Note </h1>
+<h1> Updated Note </h1>
 <img src="screenshots/AfterEdit.png">
 <h1> Profile Page </h1>
 <img src="screenshots/EditProfile.png">
